@@ -1,0 +1,724 @@
+/* header-start */
+/* This CSS code styles the navigation bar */
+nav {
+  background-color: #23180d;
+  height: 100px;
+  width: 100%;
+}
+
+/* This CSS code styles the container for the navigation bar */
+.nav-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-shrink: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* This CSS code styles the list items of the navigation bar */
+.nav-container ul li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+/* Set the display and styles for the menu icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Apply styles for screens with a maximum width of 350px */
+@media only screen and (max-width:350px) {
+
+  /* Reverse the order of the nav container's flex-direction */
+  .nav-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /* Add margin to the left of the menu icon */
+  .menu-icon {
+    margin-left: 90%;
+  }
+}
+
+/* Set the display and styles for the navigation list */
+.nav-list {
+  display: flex;
+  flex-shrink: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Set the margin for the navigation list items */
+.nav-list li {
+  margin: 0 10px;
+}
+
+/* Set the font color, decoration, and size for the navigation list item links */
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+
+/* Media query for screens with maximum width of 880px */
+@media only screen and (max-width: 880px) {
+
+  /* Display the menu icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide the nav list by default */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #23180d;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  /* Add margin to each list item in the nav list */
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  /* Style the anchor tag in each list item */
+  .nav-list li a {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Show the nav list when the menu icon is clicked */
+  .showing {
+    display: block;
+  }
+}
+
+/* This class sets the style for the button with red background and white text */
+.btn-danger-hover {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: white;
+}
+
+/* This class sets the style for the button when the mouse hovers over it */
+.btn-danger-hover:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* This class sets the style for text in white color */
+.white-color {
+  color: white;
+}
+
+/* This class sets the style for horizontal line with white color */
+.hr-color {
+  color: white;
+  border-color: white;
+  border-width: 3px;
+}
+
+/* Set background color for header */
+.bg-head-color {
+  background-color: black;
+}
+
+/* Styling for search bar */
+.search {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width:880px) {
+  .search {
+    height: 30px;
+    width: 40%;
+    border-radius: 4px;
+  }
+}
+
+/* Styling for blue colored text */
+.blue-color {
+  color: blue;
+  background-color: white;
+}
+
+/* Styling for sky blue colored text */
+.skyblue-color {
+  color: rgb(19, 181, 206);
+  background-color: white;
+}
+
+.forum {
+  display: flex;
+  flex-shrink: 2;
+}
+
+/* header-end */
+
+/* main-div-start */
+
+#my-favorites {
+  transform: rotate(-90deg) translateY(-50%);
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: -15px;
+  /* Use a negative value */
+}
+
+/*
+Sets up the main container that houses the entire layout.
+Uses CSS grid to create three columns: a 20% wide sidebar on the left, a 60% wide center column, and a 20% wide sidebar on the right.
+Each column is given a named grid area: "sidebar-1", "center", "sidebar-2".
+The background color is set to a dark brown.
+*/
+.main-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "sidebar-1 center sidebar-2";
+  background-color: #2d2013;
+}
+
+/*
+  Changes the layout for smaller screens with a maximum width of 1140px.
+  Decreases the width of the sidebars to 10% and increases the center column to 80%.
+  */
+@media (max-width:1140px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+/*
+  Changes the layout for smaller screens with a maximum width of 1024px.
+  Decreases the width of the sidebars to 5% and increases the center column to 90%.
+  */
+@media (max-width:1024px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+/*
+  Changes the layout for smaller screens with a maximum width of 768px.
+  Hides the sidebars completely and displays only the center column.
+  */
+@media (max-width:768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+/*
+  Changes the layout for smaller screens with a maximum width of 425px.
+  Hides the sidebars completely and displays only the center column.
+  */
+@media (max-width:425px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+/* Set the styles for the welcome section header */
+.welcome-head {
+  height: auto;
+  width: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Set the styles for the logo image in the welcome section header */
+.welcome-head img {
+  height: 30%;
+  width: 30%;
+}
+
+/* Set the styles for the welcome section header when the screen size is less than or equal to 319px */
+@media only screen and (max-width:319px) {
+  .welcome-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Set the styles for the logo image in the welcome section header when the screen size is less than or equal to 425px */
+@media only screen and (max-width:425px) {
+  .welcome-head img {
+    height: 20%;
+    width: 20%;
+  }
+}
+
+/* Set the styles for the logo image in the welcome section header when the screen size is less than or equal to 320px */
+@media only screen and (max-width:320px) {
+  .welcome-head img {
+    height: 18%;
+    width: 18%;
+  }
+}
+
+/* Styling for the welcome text section */
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Styling for the JSON link */
+.json-link {
+  color: orange;
+  text-decoration: none;
+}
+
+/* Styling for white-colored text */
+.white-color {
+  color: white;
+}
+
+/* Styling for pay text */
+.pay {
+  font-size: large;
+  font-style: italic;
+  color: rgb(3, 3, 72);
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Styling for pal text */
+.pal {
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(6, 171, 237);
+  font-family: sans-serif;
+}
+
+/* Styling for the PayPal button */
+.pay-pal-button {
+  height: 35px;
+  width: auto;
+  border: none;
+  background-color: #ffc439;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Styling for the PayPal button focus state */
+.pay-pal-button:focus {
+  outline: none;
+}
+
+/* Styling for the PayPal button hover state */
+.pay-pal-button:hover {
+  background-color: gold;
+}
+
+/* Adding comments to CSS code */
+
+/* Styles for the parent container of the search bar section */
+.sub {
+  padding: 10px;
+}
+
+/* Styles for the search bar section */
+.search-bar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles for the search container */
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styles for the search box input field */
+.search-box {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+/* Styles for the search button */
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 50px;
+  font-size: 14px;
+  background-color: rgb(209, 206, 206);
+  cursor: pointer;
+}
+
+/* Styles for the search div */
+.search-div2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* This media query sets the width of the search box to 350px and changes the flex direction of its container to row on screens with a minimum width of 768px */
+@media (min-width:768px) {
+  .search-box {
+    width: 350px;
+  }
+
+  .search-div2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* This class styles the search bar container by setting display to flex, gap to 2px, and aligning and justifying the content to the center */
+.search-part {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* This class styles the container for the latest meals by setting its width to 100%, margin-top to 30px, display to flex, flex direction to column, and aligning and justifying the content to the center. Also, it sets a margin-bottom of 70px */
+.latest-meals-container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+/* This class styles the container for the second set of latest meals by setting margin-top to 20px, height to auto, width to 100%, display to flex, justify-content to space-between, align-items to center, and text-align to center */
+.latest-meals2 {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* This class styles the container for the third set of latest meals by setting margin-top to 20px, height to auto, width to 100%, display to flex, justify-content to space-between, align-items to center, and text-align to center */
+.latest-meals3 {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Popular Ingredients Section */
+.Popular-Ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.Popular-Ingredients-div2 {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Random Meals Section */
+.random-meals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-meals-div1 {
+  text-align: center;
+}
+
+.random-meals-div2 {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.random-meals-div3 {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.random-meals-div3 div {
+  text-align: center;
+}
+
+/* random-Meals-End */
+
+/* Sets a minimum height for the container element */
+.container {
+  min-height: 60vh;
+}
+
+/* Styles for a section displaying random ingredients */
+.random-Ingredients {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styles for a flex container used to align elements */
+.flex-container {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styles for a section displaying a list of countries to browse recipes by */
+.browse-by-country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Styles for the main div element */
+.main-div {
+  height: auto;
+  width: 100%;
+}
+
+/* Main div 1 */
+.main-div1 {
+  grid-area: sidebar-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Main div 2 */
+.main-div2 {
+  grid-area: center;
+}
+
+/* Sidebar 1 */
+.s1 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Full screen sidebar 1 */
+.f-s1 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Main div 3 */
+.main-div3 {
+  grid-area: sidebar-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Sidebar 2 */
+.s2 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Full screen sidebar 2 */
+.f-s2 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Styles for browsing recipes by name */
+.browse-by-name {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the container for the recipe links */
+.browse-by-name-div2 {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles for the text that appears above the recipe links */
+.bbn-text {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Styles for the links to individual recipes */
+.browse-by-name-link {
+  color: orange;
+  font-size: larger;
+  width: auto;
+  text-align: center;
+}
+
+/* Styles for the appearance of the recipe links when hovered over */
+.browse-by-name-link:hover {
+  color: #f9eb80;
+  text-decoration: none;
+}
+
+/* Styles for the footer container */
+.footer-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  background-color: #23180d;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styles for the first div in the footer container */
+.f-div1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Styles for the social media icons in the footer */
+.f-div1 img {
+  height: 30px;
+  width: 30px;
+}
+
+/* Styles for the footer buttons */
+.f-btns {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: white;
+}
+
+/* Styles for the footer buttons when hovered over */
+.f-btns:hover {
+  color: red;
+}
+
+/* Styles for the footer buttons when they have focus */
+.f-btns:focus {
+  outline: none;
+}
+
+/* Media query for when the screen size is 768px or less */
+@media (max-width:768px) {
+
+  /* Styles for the footer container when the screen size is 768px or less */
+  .footer-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Styles for the first div in the footer container when the screen size is 768px or less */
+  .f-div1 {
+    margin-top: 30px;
+  }
+
+  /* Styles for the third div in the footer container when the screen size is 768px or less */
+  .f-div3 {
+    margin-bottom: 30px;
+  }
+}

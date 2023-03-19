@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set character encoding to UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Set the compatibility mode to the latest version of IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the viewport width to the device width and scale the page to fit the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Font Awesome kit with free icons -->
+    <script src="https://kit.fontawesome.com/e79f1189be.js" crossorigin="anonymous"></script>
+    <!-- Include Bootstrap CSS from CDN with integrity and cross-site request forgery protection -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Include custom CSS file -->
+    <link rel="stylesheet" href="index.css" type = "text/css">
+    <!-- Set the favicon to the logo of TheMealDB website -->
+    <link rel="icon" href="https://www.themealdb.com/favicon.ico">
+    <!-- Set the title of the page -->
+    <title>TheMealDB</title>
+</head>
+
+<body>
+    <main>
+        <!-- this is our main body holding all divs -->
+        <div class="main-container">
+            <!-- this is our div1 used for sidebar1 -->
+            <div class="main-div main-div1"> 
+              <div class="s1"></div>
+              <div class="f-s1"></div>
+            </div>
+            <div class="main-div main-div2">
+              <!-- This code represents the header section of a website -->
+            <header>
+              <!-- Navigation menu -->
+              <nav>
+                  <!-- Navigation container -->
+                  <div class="nav-container">
+                      <!-- Logo -->
+                      <div class="logo">
+                          <a href="#"><img src="https://www.themealdb.com/images/logo-small.png" alt=""></a>
+                      </div>
+                      <!-- Menu icon for small screens -->
+                      <div class="menu-icon">
+                          <i class="fa fa-bars"></i>
+                      </div>
+                      <!-- Navigation list -->
+                      <ul class="nav-list">
+                          <!-- Home button -->
+                          <li>
+                              <a href="./index.html" type="button" class="btn btn-danger">Home</a>
+                          </li>
+                          <!-- API button -->
+                          <li>
+                              <button type="button" class="btn btn-danger-hover">API</button>
+                          </li>
+                          <!-- Forum section -->
+                          <li class="forum">
+                              <!-- Forum button -->
+                              <span>
+                                  <button type="button" class="btn btn-danger-hover">Forum</button>
+                              </span>
+                              <!-- Facebook icon button -->
+                              <span class="btn btn-danger-hover">
+                                  <i class="fa-brands fa-square-facebook blue-color"></i>
+                              </span>
+                              <!-- Twitter icon button -->
+                              <span class="btn btn-danger-hover">
+                                  <i class="fa-brands fa-square-twitter skyblue-color"></i>
+                              </span>
+                          </li>
+                          <!-- Search bar -->
+                          <li>
+                              <input type="search" class="search" placeholder="Search">
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+            </header>
+
+              <!-- Modal -->
+              <!-- Button trigger modal -->
+              <a type="button" id="my-favorites" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> MyFavorites</a>
+
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">My Favorites</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- we add our favorite meals in this modal-body  -->
+                    <div class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container">
+
+                <!-- This section contains the header of the main page which displays a welcome message with an icon, text and a PayPal subscription button. -->
+                <div class="welcome-head">
+                  <!-- The meal-icon image displayed on the left side of the header. -->
+                  <img src="https://www.themealdb.com/images/meal-icon.png" alt="meal-icon">
+                  <!-- The welcome-text div containing the welcome message, a link to the API and the PayPal subscription button. -->
+                  <div class="welcome-text">
+                      <!-- The main heading of the welcome message. -->
+                      <h1 class="white-color">Welcome to TheMealDB</h1>
+                      <!-- A short description of the website. -->
+                      <span class="white-color">Welcome to TheMealDB: An open, crowd-sourced database of Recipes from around the world.</span>
+                      <!-- A link to the JSON API and a description of its additional features for subscribers. -->
+                      <span class="white-color">We also offer a <span><a href="#" alt="JSONlink" class="json-link">free JSON API</a></span> for anyone wanting to use it, with additional features for subscribers.</span>
+                      <!-- The PayPal subscription button. -->
+                      <button type="button" class="pay-pal-button"><span class="pay">Pay</span><span class="pal">Pal </span><span class="sub">Subscribe</span></button>
+                      <!-- A description of the subscription price and number of supporters. -->
+                      <span class="white-color">Click to Support $2 per month (cancel anytime)</span>
+                      <span class="white-color">Currently 50 supporters</span>
+                  </div>
+                  <!-- The meal-icon image displayed on the right side of the header. -->
+                  <img src="https://www.themealdb.com/images/meal-icon.png" alt="meal-icon">
+                </div>
+  
+                <hr class="hr-color"/>
+  
+                <!-- This div contains the search bar -->
+                <div class="search-bar">
+                  <!-- This div contains the search box and the search button -->
+                  <div class="search-container">
+                    <!-- This input field is used for search queries -->
+                    <input type="text" class="search-box" placeholder="Search for a meal...">
+                    <!-- This button is used to submit the search query -->
+                    <button class="search-btn"><i id="search-icon" class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+                  <!-- This div contains the search statistics -->
+                  <div class="search-div2">
+                    <!-- This div shows the total number of meals in the database -->
+                    <div class="search-part">
+                      <img src="https://www.themealdb.com/images/icons/meal-icon6.png" alt="Total-meals">
+                      <b class="white-color">Total Meals: </b>
+                      <span class="white-color">285</span>
+                    </div>
+                    <!-- This div shows the total number of ingredients in the database -->
+                    <div class="search-part">
+                      <img src="https://www.themealdb.com/images/icons/meal-icon4.png" alt="Total Ingredients">
+                      <b class="white-color">Total Ingredients: </b>
+                      <span class="white-color">574</span>
+                    </div>
+                    <!-- This div shows the total number of images available in the database -->
+                    <div class="search-part">
+                      <img src="https://www.themealdb.com/images/icons/image2.png" alt="Images: ">
+                      <b class="white-color">Images: </b>
+                      <span class="white-color">285</span>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="hr-color"/>
+                
+                <div class="latest-meals-container">
+                  <!-- The first div with the class "latest-meals1" contains the title "Latest Meals" in white color. -->
+                  <div class="latest-meals1"><span class="white-color">Latest Meals</span></div>
+                  <!-- The second div with the class "latest-meals2" is where the latest meals will be displayed dynamically through JavaScript. -->
+                  <div class="latest-meals2"></div>
+                  <!-- The third div with the class "latest-meals3" is also where the latest meals will be displayed dynamically through JavaScript. -->
+                  <div class="latest-meals3"></div>
+                </div>
+  
+                <hr class="hr-color"/>
+  
+                <!-- This is a container for a section about popular ingredients -->
+                <div class="Popular-Ingredients">
+                  <!-- This is the heading of the section -->
+                  <div class="Popular-Ingredients-div1"><span class="white-color">Popular Ingredients</span></div>
+                  <!-- This is a container for displaying the popular ingredients -->
+                  <div class="Popular-Ingredients-div2"></div>
+                </div>
+
+  
+                <hr class="hr-color"/>
+  
+                <!-- This is a container div for displaying random meals -->
+                <div class="random-meals">
+                  <!-- This div displays the title "Random Meals" -->
+                  <div class="random-meals-div1 white-color">Random Meals</div>
+                  <!-- This div will contain the HTML for displaying random meals -->
+                  <div class="random-meals-div2"></div>
+                  <!-- This div will contain the HTML for displaying more random meals -->
+                  <div class="random-meals-div3"></div>
+                </div>
+  
+                <hr class="hr-color"/>
+  
+                <!-- A container to display random ingredients-->
+                <div class="random-Ingredients">
+                  <!-- A div to display the title "Random Ingredients" in white color-->
+                  <div class="random-Ingredients-div1"><span class="white-color">Random Ingredients</span></div>
+                  <!-- A div to contain the list of random ingredients as a flex container-->
+                  <div class="flex-container"></div>
+                </div>
+              
+                <hr class="hr-color"/>
+              
+  
+                <div class="browse-by-country">
+                  <!-- A div to display the title "Browse Country" in white color-->
+                  <div class="country-div1 "><div class="span white-color">Browse Country</div></div>
+                  <!-- list of countries -->
+                  <div class="country-div2">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/gb.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/us.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/fr.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/ca.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/jm.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/cn.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/nl.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/eg.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/gr.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/in.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/ie.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/it.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/jp.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/kn.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/my.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/mx.png" alt="">
+                  </div>
+                  <div class="country-div3">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/ma.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/hr.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/no.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/pt.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/ru.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/ar.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/es.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/sk.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/th.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/sa.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/vn.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/tr.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/sy.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/dz.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/tn.png" alt="">
+                      <img src="https://www.themealdb.com/images/icons/flags/big/64/pl.png" alt="">
+                  </div>
+                </div>
+              </div>
+  
+                <!-- This div contains the section for browsing meals by name -->
+              <div class="browse-by-name">
+                <!-- This div contains the heading for the section -->
+                <div class="browse-by-name-div1"><span class="white-color">Browse By Name</span></div>
+                <!-- This div is for displaying the search results for meals by name i.e with alphabet A to Z-->
+                <div class="browse-by-name-div2"></div>
+              </div>
+
+
+              
+
+              <div class="footer-container">
+                <!-- First division contains copyright information and country flag -->
+                <div class="f-div1">
+                    <span class="white-color">© 2023 TheMealDB</span>
+                    <span class="white-color">Proudly built in the INDIA</span>
+                    <img src="https://www.themealdb.com/images/icons/flags/big/64/in.png" alt="">
+                </div>
+                
+                <!-- Second division contains three images of logos -->
+                <div class="f-div2">
+                    <img src="https://www.themealdb.com/images/logo-tcdb.png" alt="">
+                    <img src="https://www.themealdb.com/images/logo-tadb.png" alt="">
+                    <img src="https://www.themealdb.com/images/logo-tsdb.png" alt="">
+                </div>
+                
+                <!-- Third division contains three buttons for About, Faq, and Contact -->
+                <div class="f-div3">
+                    <button class="f-btns">About</button>
+                    <button class="f-btns">Faq</button>
+                    <button class="f-btns">Contact</button>
+                </div>
+              </div>            
+              </div>
+              <!-- this is 3rd div used for side bar -->
+              <div class="main-div main-div3">
+                <!-- sidebar-2 is named s2 as class -->
+                <div class="s2"></div>
+                <!-- this is footer of sidebar-2 -->
+                <div class="f-s2"></div>
+              </div>
+
+          </div>
+    </main>
+
+    <!-- My own script  -->
+    <script type="text/JavaScript" src="./index.js"></script>
+    <script type="text/JavaScript" src="./apiRequest.js"></script>
+
+    <!-- bootstrap script  -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  </body>
+</html>

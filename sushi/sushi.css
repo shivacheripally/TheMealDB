@@ -1,0 +1,459 @@
+/* header-start */
+/* Style for navigation bar */
+nav {
+  background-color: #23180d;
+  height: 100px;
+  width: 100%;
+}
+
+/* Container for navigation bar items */
+.nav-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-shrink: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Style for unordered list items inside the navigation bar */
+.nav-container ul li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+/* Style for menu icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width:350px) {
+
+  /* Reorder navigation bar items for small screen devices */
+  .nav-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /* Position menu icon on the right side of navigation bar */
+  .menu-icon {
+    margin-left: 90%;
+  }
+}
+
+/* Style for navigation list */
+.nav-list {
+  display: flex;
+  flex-shrink: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 880px) {
+
+  /* Show menu icon on small screens */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide nav list and display it vertically */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #23180d;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  /* Set margin for nav list items */
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  /* Style for nav list links */
+  .nav-list li a {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Show nav list when the class 'showing' is added */
+  .showing {
+    display: block;
+  }
+}
+
+/* Style for danger button with hover effect */
+.btn-danger-hover {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: white;
+}
+
+.btn-danger-hover:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* Style for white colored text */
+.white-color {
+  color: white;
+}
+
+/* Style for horizontal line with white color */
+.hr-color {
+  border-color: white;
+  border-width: 2px;
+}
+
+/* Style for background color of header */
+.bg-head-color {
+  background-color: black;
+}
+
+/* Style for search input */
+.search {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Media query for small screens */
+@media (max-width:880px) {
+
+  /* Styles for search bar */
+  .search {
+    height: 30px;
+    width: 40%;
+    border-radius: 4px;
+  }
+}
+
+/* Styles for blue-colored text */
+.blue-color {
+  color: blue;
+  background-color: white;
+}
+
+/* Styles for sky-blue colored text */
+.skyblue-color {
+  color: rgb(19, 181, 206);
+  background-color: white;
+}
+
+/* Styles for forum container */
+.forum {
+  display: flex;
+  flex-shrink: 2;
+}
+
+/* Styles for header section */
+
+/* Styles for main container */
+.main-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "sidebar-1 center sidebar-2";
+  background-color: #2d2013;
+}
+
+/* Media queries for responsive design */
+@media (max-width:1140px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+@media (max-width:1024px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+@media (max-width:768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+@media (max-width:425px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+    grid-template-areas: "sidebar-1 center sidebar-2";
+  }
+}
+
+
+/* Styles for search bar */
+.search-bar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles for search container */
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styles for main div */
+.main-div {
+  height: auto;
+  width: 100%;
+}
+
+/* Styles for main div 1 */
+.main-div1 {
+  grid-area: sidebar-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styles for main div 2 */
+.main-div2 {
+  grid-area: center;
+}
+
+/* Styles for s1 */
+.s1 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Styles for f-s1 */
+.f-s1 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Styles for main div 3 */
+.main-div3 {
+  grid-area: sidebar-2;
+  /* Commented out border style */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styles for s2 */
+.s2 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Styles for f-s2 */
+.f-s2 {
+  height: 100px;
+  width: 100%;
+  background-color: #23180d;
+}
+
+/* Styles for browse-by-name section */
+.browse-by-name {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for browse-by-name div 2 */
+.browse-by-name-div2 {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles for browse-by-name text */
+.bbn-text {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Styles for browse-by-name link */
+.browse-by-name-link {
+  color: orange;
+  font-size: larger;
+  width: auto;
+  text-align: center;
+}
+
+/* Styles for browse-by-name link hover state */
+.browse-by-name-link:hover {
+  color: #f9eb80;
+  text-decoration: none;
+}
+
+/* This section styles the footer container */
+.footer-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  background-color: #23180d;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* This section styles the first div inside the footer container */
+.f-div1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* This section styles the image inside the first div */
+.f-div1 img {
+  height: 30px;
+  width: 30px;
+}
+
+/* This section styles the buttons inside the footer container */
+.f-btns {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: white;
+}
+
+/* This section styles the buttons when hovering over them */
+.f-btns:hover {
+  color: red;
+}
+
+/* This section styles the buttons when they are in focus */
+.f-btns:focus {
+  outline: none;
+}
+
+/* This section styles the footer container when the screen size is less than or equal to 768px */
+@media (max-width:768px) {
+  .footer-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* This section styles the first div inside the footer container when the screen size is less than or equal to 768px */
+  .f-div1 {
+    margin-top: 30px;
+  }
+
+  /* This section styles the third div inside the footer container when the screen size is less than or equal to 768px */
+  .f-div3 {
+    margin-bottom: 30px;
+  }
+}
+
+/*This section styles the container for the sushi section */
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #2d2013;
+  display: flex;
+  flex-direction: column;
+}
+
+/* This section styles the first item inside the sushi container */
+.item1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* This section styles the first div inside the first item of the sushi container */
+.div1 {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* This section styles the second div inside the first item of the sushi container */
+.div2 {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This section styles the first box inside the first item of the sushi container */
+.box1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* This section styles the second box inside the sushi container */
+.box2 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* This section styles the second item inside the sushi container */
+.item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
