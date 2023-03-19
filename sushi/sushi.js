@@ -93,7 +93,7 @@ document.addEventListener('click', function(e){
 // If the target element has a class name of 'left', redirect to index.html
 if(target.className === 'left'){
     console.log('left');
-    window.location.href = '../index/index.html';
+    window.location.href = '../index.html';
 }
 
 // If the target element has a class name of 'right', redirect to Fettuccine Alfredo.html

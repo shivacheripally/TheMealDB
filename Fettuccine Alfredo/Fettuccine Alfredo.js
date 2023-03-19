@@ -100,7 +100,7 @@ if(target.className === 'left'){
 // If the target element has a class name of 'right', redirect to Fettuccine Alfredo.html
 if(target.className === 'right'){
     console.log('right');
-    window.location.href = '../index/index.html';
+    window.location.href = '../index.html';
 }
 
 });

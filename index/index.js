@@ -28,10 +28,10 @@ const latestMealsImageUrlsNames1 = [
 ]
 //array of Latest meals subslinks
 const latestMealsImageUrlsLinks1 = [
-  "../sushi/sushi.html",
-  "../Fettuccine Alfredo/Fettuccine Alfredo.html",
-  "../sushi/sushi.html",
-  "../sushi/sushi.html"
+  "./sushi/sushi.html",
+  "./Fettuccine Alfredo/Fettuccine Alfredo.html",
+  "./sushi/sushi.html",
+  "./sushi/sushi.html"
 ]
 
 //array of Latest meals2
